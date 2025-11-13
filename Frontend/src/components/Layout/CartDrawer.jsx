@@ -6,6 +6,7 @@ export const CartDrawer = ({drawerOPen, toggleCartDrawer}) => {
   
 const navigate = useNavigate()
   const handleCheckout =  () => {
+    toggleCartDrawer()
     navigate("/Checkout")
   }
 

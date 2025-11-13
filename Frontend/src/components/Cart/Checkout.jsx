@@ -193,6 +193,47 @@ export const Checkout = () => {
           </div>
         </form>
       </div>
-    </div>
+<div className="bg-gray-50 p-6 rounded-lg">
+  <h3 className="text-lg mb-4 font-semibold">Order Summary</h3>
+
+  <div className="border-t py-4 mb-4">
+    {cart.products.map((product, index) => (
+      <div
+        key={index}
+        className="flex items-start justify-between py-2 border-b"
+      >
+        <div className="flex items-start space-x-4">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-20 h-24 object-cover rounded"
+          />
+          <div>
+            <h4 className="font-medium text-gray-800">{product.name}</h4>
+            <p className="text-sm text-gray-500">
+              Size: {product.size} | Color: {product.color}
+            </p>
+          </div>
+        </div>
+        <p className="font-semibold text-gray-700">${product.price}</p>
+      </div>
+    ))}
+  </div>
+
+<div className="flex justify-between items-center text-lg font-medium mt-4">
+  <p>Subtotal</p>
+  <p>${cart.totalPrice?.toLocaleString()}</p>
+</div>
+<div className="flex justify-between items-center text-lg">
+  <p>Shipping</p>
+  <p>Free</p>
+</div>
+<div className="flex justify-between items-center text-lg mt-4 border-t pt-4">
+  <p>Total</p>
+  <p>${cart.totalPrice?.toLocaleString()}</p>
+</div>
+
+</div>
+ </div>
   );
 };

@@ -9,6 +9,9 @@ import { Profile } from './pages/Profile'
 import { CollectionPage } from './pages/CollectionPage'
 import { ProductsGrids } from './components/Products/ProductsGrids'
 import { Checkout } from './components/Cart/Checkout'
+import { OrderComfirmation } from './pages/OrderComfirmation'
+import { OrderDetailPage } from './pages/OrderDetailPage'
+import { MyOrdersPage } from './pages/MyOrdersPage'
 
 
 
@@ -26,6 +29,9 @@ export const App = () => {
  <Route path="collections/:collection" element={<CollectionPage/>}/>  
  <Route path="product/:id" element={<ProductsGrids/>}/>  
    <Route path="checkout" element={<Checkout />} />
+   <Route path="order-confirmation" element={<OrderComfirmation />} />
+   <Route path="Order/:id" element={<OrderDetailPage />} />
+   <Route path="/my-orders" element={<MyOrdersPage />} />
 
  </Route>
 </Routes>
