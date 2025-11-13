@@ -26,11 +26,47 @@ setnavDrawerOPen(!navDrawerOPen)
     <>
       <nav className="container mx-auto flex items-center justify-between py-4 px-6">
         
-        <div>
-          <Link to="/collections/all" className="text-2xl">
-            Rabit
-          </Link>
-        </div>
+  <div>
+  <Link
+    to="/collections/all"
+    className="
+      relative 
+      inline-block 
+      text-2xl 
+      font-medium 
+      uppercase 
+      px-10 
+      py-4 
+      rounded-full 
+      text-black 
+      bg-white 
+      transition-all 
+      duration-200 
+      hover:-translate-y-1 
+      hover:shadow-[0_10px_20px_rgba(0,0,0,0.2)] 
+      active:translate-y-0.5 
+      active:shadow-[0_5px_10px_rgba(0,0,0,0.2)]
+      overflow-hidden
+    "
+  >
+    <span
+      className="
+        absolute 
+        inset-0 
+        rounded-full 
+        bg-white 
+        transition-all 
+        duration-500 
+        scale-100 
+        opacity-100 
+        group-hover:scale-150 
+        group-hover:opacity-0
+      "
+    ></span>
+    <span className="relative z-10">BET HORA FASHION STORE</span>
+  </Link>
+</div>
+
         <div className="hidden md:flex space-x-6">
           <Link
             to="#"

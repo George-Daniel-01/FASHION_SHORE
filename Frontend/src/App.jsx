@@ -11,6 +11,7 @@ import { ProductsGrids } from './components/Products/ProductsGrids'
 import { Checkout } from './components/Cart/Checkout'
 
 
+
 export const App = () => {
   return (
 
@@ -24,7 +25,8 @@ export const App = () => {
  <Route path="Profile" element={<Profile/>}/>  
  <Route path="collections/:collection" element={<CollectionPage/>}/>  
  <Route path="product/:id" element={<ProductsGrids/>}/>  
- <Route path="checkout" element={<Checkout />}/>  
+   <Route path="checkout" element={<Checkout />} />
+
  </Route>
 </Routes>
 </BrowserRouter> 
